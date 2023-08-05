@@ -16,7 +16,7 @@ embedding_model_dict = {
     "ernie-tiny": "nghuyong/ernie-3.0-nano-zh",
     "ernie-base": "nghuyong/ernie-3.0-base-zh",
     "text2vec-base": "shibing624/text2vec-base-chinese",
-    "text2vec": "GanymedeNil/text2vec-large-chinese",
+    "text2vec": "../text2vec-large-chinese",
     "text2vec-base-multilingual": "shibing624/text2vec-base-multilingual",
     "text2vec-base-chinese-sentence": "shibing624/text2vec-base-chinese-sentence",
     "text2vec-base-chinese-paraphrase": "shibing624/text2vec-base-chinese-paraphrase",
@@ -45,7 +45,7 @@ llm_model_dict = {
     "chatglm-6b-int4": {
         "name": "chatglm-6b-int4",
         "pretrained_model_name": "THUDM/chatglm-6b-int4",
-        "local_model_path": None,
+        "local_model_path": "../models/chatglm-6b-int4",
         "provides": "ChatGLMLLMChain"
     },
     "chatglm-6b-int8": {
@@ -91,7 +91,7 @@ llm_model_dict = {
     "chatglm2-6b-int4": {
         "name": "chatglm2-6b-int4",
         "pretrained_model_name": "THUDM/chatglm2-6b-int4",
-        "local_model_path": None,
+        "local_model_path": "../models/chatglm-6b-int4",
         "provides": "ChatGLMLLMChain"
     },
     "chatglm2-6b-int8": {
@@ -184,7 +184,7 @@ llm_model_dict = {
     "fastchat-chatglm-6b-int4": {
         "name": "chatglm-6b-int4",  # "name"修改为fastchat服务中的"model_name"
         "pretrained_model_name": "chatglm-6b-int4",
-        "local_model_path": None,
+        "local_model_path": "../models/chatglm-6b-int4",
         "provides": "FastChatOpenAILLMChain",  # 使用fastchat api时，需保证"provides"为"FastChatOpenAILLMChain"
         "api_base_url": "http://localhost:8001/v1",  # "name"修改为fastchat服务中的"api_base_url"
         "api_key": "EMPTY"
@@ -228,7 +228,7 @@ llm_model_dict = {
 }
 
 # LLM 名称
-LLM_MODEL = "chatglm2-6b-32k"
+LLM_MODEL = "chatglm2-6b-int4"
 # 量化加载8bit 模型
 LOAD_IN_8BIT = False
 # Load the model with bfloat16 precision. Requires NVIDIA Ampere GPU.
